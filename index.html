@@ -15,15 +15,15 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid text-center text-light">
         <div class="row">
-            <img src="" alt="">
             <div class="col-6">
-                <div id="playerHealth"></div>
+                <div id="playerHealth" class="bg-success p-3"></div>
+                <!-- <img src="Daedricsword.png" class="img img-fluid filter-shadow" id="playerSword"> -->
             </div>
             <div class="col-6">
-                <div id="enemyHealth"></div>
-                <img src="Alduin.png" class="img img-fluid filter-shadow" alt="Big bad">
+                <div id="enemyHealth" class="bg-danger p-3"></div>
+                <img src="Alduin.png" class=" img img-fluid filter-shadow" alt="Big bad">
             </div>
         </div>
         <div class="row">
@@ -34,17 +34,18 @@
                 You lose!
             </div>
         </div>
-        <div class="row">
-            <footer>
+        <footer class="row drop-shadow">
+            <div class="p-2 d-flex justify-content-around w-100">
                 <button type="button" class="btn btn-primary" onclick="hurtPlayer(10)">Hurt Player</button>
                 <button type="button" class="btn btn-primary" onclick="damage(10)">Damage</button>
                 <button type="button" class="btn btn-primary" onclick="damage(20)">Attack</button>
                 <button type="button" class="btn btn-primary" onclick="damage(30)">Shout</button>
-                <div id="inventory">
-
-                </div>
-            </footer>
-        </div>
+            </div>
+            <div class="w-100 p-2">
+                <h3>Inventory</h3>
+                <div id="inventory" class="w-100 p-2 d-flex justify-content-around"></div>
+            </div>
+        </footer>
     </div>
 
 
