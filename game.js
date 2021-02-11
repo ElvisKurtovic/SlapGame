@@ -14,6 +14,11 @@
 
 let enemyHealth = 100;
 let playerHealth = 100;
+let items = {
+    item1: {name: 'itemName1', modifier: 2},
+    item2: {name: 'itemName2', modifier: 5},
+    item3: {name: 'itemName3', modifier: 10},
+}
 
 function spell(damage) {
     enemyHealth -= damage
