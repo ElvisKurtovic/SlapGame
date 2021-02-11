@@ -16,5 +16,5 @@ let health = 100;
 
 function spell() {
    health--
-   alert("Health: " + health)
+   document.getElementById("enemyHealth").innerText= ("Health: " + health)
 }
