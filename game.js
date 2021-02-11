@@ -14,21 +14,21 @@
 
 let enemyHealth = 100;
 let playerHealth = 100;
-let items = {
-    item1: {name: 'itemName1', modifier: 2},
-    item2: {name: 'itemName2', modifier: 5},
-    item3: {name: 'itemName3', modifier: 10},
-}
+let inventory = [
+    {name: 'Health Potion', modifier: 15, use: "heal"},
+    {name: 'Fireball Scroll', modifier: 20, use: "damage"},
+    {name: 'Throwing Knife', modifier: 1, use: "damage"},
+]
 
-items:[]
 
-function spell(damage) {
+
+function damage(damage) {
     enemyHealth -= damage
     if(enemyHealth <= 0){
         win()
         enemyHealth = 0
     }
-    document.getElementById("enemyHealth").innerText= ("Health: " + enemyHealth)
+    drawHealth()
 }
  function win() {
      document.getElementById("winResult").hidden= false
@@ -40,8 +40,35 @@ function spell(damage) {
         lose()
         playerHealth = 0
     }
-    document.getElementById("playerHealth").innerText= ("Health: " + playerHealth)
+drawHealth()
 } 
 function lose() {
     document.getElementById("loseResult").hidden= false
 }
+
+function drawItems() {
+    let button = ""
+    for (let i = 0; i < inventory.length; i++) {
+        const item = inventory[i]
+       button +=  /* HTML */ `<button type="button" class="btn btn-primary" onclick="${item.use+"("+item.modifier+")"}">${item.name}</button>`
+
+        
+    }
+    document.getElementById("inventory").innerHTML= button
+}
+
+function heal(amount) {
+    playerHealth += amount
+    drawHealth()
+}
+
+function drawHealth(){
+    document.getElementById("playerHealth").innerText= ("Health: " + playerHealth)
+    document.getElementById("enemyHealth").innerText= ("Health: " + enemyHealth)
+
+
+}
+
+
+drawItems()
+
