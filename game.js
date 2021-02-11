@@ -21,3 +21,6 @@ function spell(damage) {
         win()
     }
 }
+ function win() {
+     document.getElementById("gameResult")
+ }
