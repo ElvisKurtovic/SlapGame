@@ -24,5 +24,17 @@ function spell(damage) {
     document.getElementById("enemyHealth").innerText= ("Health: " + enemyHealth)
 }
  function win() {
-     document.getElementById("gameResult").hidden= false
+     document.getElementById("winResult").hidden= false
  }
+
+ function hurtPlayer(damage) {
+    playerHealth -= damage
+    if(playerHealth <= 0){
+        lose()
+        playerHealth = 0
+    }
+    document.getElementById("playerHealth").innerText= ("Health: " + playerHealth)
+} 
+function lose() {
+    document.getElementById("loseResult").hidden= false
+}
