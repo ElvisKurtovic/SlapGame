@@ -20,6 +20,8 @@ let items = {
     item3: {name: 'itemName3', modifier: 10},
 }
 
+items:[]
+
 function spell(damage) {
     enemyHealth -= damage
     if(enemyHealth <= 0){
