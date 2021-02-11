@@ -1,2 +1,2 @@
-var health = 100
+
 
