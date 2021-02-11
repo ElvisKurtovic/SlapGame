@@ -14,7 +14,10 @@
 
 let health = 100;
 
-function spell() {
-   health--
+function spell(damage) {
+    health -= damage
    document.getElementById("enemyHealth").innerText= ("Health: " + health)
+    if(health <= 0){
+        win()
+    }
 }
