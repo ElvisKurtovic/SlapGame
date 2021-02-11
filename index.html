@@ -15,23 +15,30 @@
 </head>
 
 <body>
-   <div class="container-fluid">
-       <div class="row">
-           <img src="" alt="">
-           <div class="col-12">
-               <div id="enemyHealth"></div>
-           </div>
-       </div>
-       <div class="row">
-           <div id="gameResult">
+    <div class="container-fluid">
+        <div class="row">
+            <img src="" alt="">
+            <div class="col-6">
+                <div id="enemyHealth"></div>
+            </div>
+            <div class="col-6">
+                <div id="playerHealth"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="winResult" hidden>
                 You win!
-           </div>
-       </div>
+            </div>
+            <div id="loseResult" hidden>
+                You lose!
+            </div>
+        </div>
         <div class="row">
             <footer>
-                <button type="button" class="btn btn-primary" onclick="spell()">Spell</button>
-                <button type="button" class="btn btn-primary" onclick="attack()">Attack</button>
-                <button type="button" class="btn btn-primary" onclick="shout()">Shout</button>
+                <button type="button" class="btn btn-primary" onclick="hurtPlayer(10)">Hurt Player</button>
+                <button type="button" class="btn btn-primary" onclick="spell(10)">Spell</button>
+                <button type="button" class="btn btn-primary" onclick="spell(20)">Attack</button>
+                <button type="button" class="btn btn-primary" onclick="spell(30)">Shout</button>
             </footer>
         </div>
     </div>
