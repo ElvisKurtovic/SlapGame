@@ -12,15 +12,17 @@
 
 
 
-let health = 100;
+let enemyHealth = 100;
+let playerHealth = 100;
 
 function spell(damage) {
-    health -= damage
-   document.getElementById("enemyHealth").innerText= ("Health: " + health)
-    if(health <= 0){
+    enemyHealth -= damage
+    if(enemyHealth <= 0){
         win()
+        enemyHealth = 0
     }
+    document.getElementById("enemyHealth").innerText= ("Health: " + enemyHealth)
 }
  function win() {
-     document.getElementById("gameResult")
+     document.getElementById("gameResult").hidden= false
  }
