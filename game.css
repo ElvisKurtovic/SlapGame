@@ -1,0 +1,17 @@
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-image: url(Sovngarde.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+header {}
+
+main {
+   flex-grow: 1;
+}
+
+footer {}
