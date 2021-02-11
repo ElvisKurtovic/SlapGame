@@ -14,7 +14,7 @@
 
 let health = 100;
 
-function slap() {
+function spell() {
    health--
    alert("Health: " + health)
 }
